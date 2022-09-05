@@ -1,0 +1,23 @@
+/* import React, { useState, useEffect } from 'react';
+import Pokedex from './Pokedex';
+import axios from 'axios';
+
+
+function App() {
+  const [pokemon, setPokemon] = useState([])
+const [loadMore, setLoadMore] = useState('')
+
+  useEffect(() => {
+    axios.get("https://pokeapi.co/api/v2/pokemon")
+    .then(res => {
+      setPokemon(res.data.results.map(p => p.name))
+    })
+  }, [])
+
+
+return (
+<Pokedex pokemon={pokemon}/>
+  );
+}
+
+export default App; */
