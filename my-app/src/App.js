@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Pokemon from './Pokemon';
 /* import axios from 'axios'; */
 
 
@@ -36,7 +37,19 @@ return (
   <div className="pokeBox">
     <div>
     <h1>Pokemon</h1>
-    { pokemons.map(pokemon => <li>{pokemon.name}</li>)}
+    { pokemons.map((pokemon, index) => 
+    <Pokemon 
+    id={pokemon. id}
+    name={pokemon.name}
+    image={pokemon.sprites.other.dream_world.front_default}
+    type={pokemon.types[0].type.name}
+    stat={pokemon.stats[0].stat.name}
+    key={index}
+    />
+    
+    )}
+
+    
     <button className="load-more">Loade more</button>
     </div>
   </div>

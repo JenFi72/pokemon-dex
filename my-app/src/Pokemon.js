@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pokemon() {
+const Pokemon = ({id, name, image, type}) => {
     return (
         <div className="pokemon">
             <div className="number">
@@ -8,8 +8,9 @@ function Pokemon() {
             </div>
             <img src={image} alt={name} />
             <div className="details">
-                <h3>{name}</h3>
+                <h3>Name:{name}</h3>
                 <small>Type: {type}</small>
+                
             </div>
         </div>
     )
