@@ -7,6 +7,9 @@ function App() {
 
   const [pokemons, setPokemons] = useState([])
   const [loadMore, setLoadMore] =useState ("https://pokeapi.co/api/v2/pokemon?limit=20")
+
+  //*I have commented  (as it didn't work) out a solution I had in mind to be able to search for stats and information on specific pokemon by using input field.*//
+  
 /*   const [pokemonName, searchPokemonName] =useState (`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)⁄ */
 
   const getPokemons = async () => {
