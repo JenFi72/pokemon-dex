@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Pokemon from './Pokemon';
-/* import axios from 'axios'; */
+
 
 
 function App() {
 
   const [pokemons, setPokemons] = useState([])
   const [loadMore, setLoadMore] =useState ("https://pokeapi.co/api/v2/pokemon?limit=20")
+/*   const [pokemonName, searchPokemonName] =useState (`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)⁄ */
 
   const getPokemons = async () => {
     const res = await fetch(loadMore)
@@ -35,6 +36,22 @@ function App() {
 
 return (
   <div className="pokeBox">
+    <div className="inputBox">
+  {/*   <input
+    className="inputBox"
+    type="text"
+    onChange={(e) => {
+      setPokemons(e.target.value);
+    }}
+    />
+    <button onClick={searchPokemonName}>Search for pokemon</button>
+     */}
+{/*       <button
+        onClick={  singlePokemon }
+      >
+        Search Pokemon
+      </button> */}
+    </div>
     <div>
     <h1>Pokemon</h1>
     { pokemons.map((pokemon, index) => 
@@ -43,7 +60,7 @@ return (
     name={pokemon.name}
     image={pokemon.sprites.other.dream_world.front_default}
     type={pokemon.types[0].type.name}
-    stat={pokemon.stats[0].stat.name}
+  /*   stats={pokemon.stats[0].stats.name} */
     key={index}
     />
     
